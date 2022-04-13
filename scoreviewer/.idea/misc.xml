@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/kilbu/Dropbox/Engineering/Projects/Cornhole Score Viewer/Android Development/scoreviewer/app/src/main/res/drawable/scanresult_advertisementbackground.xml" value="0.34739583333333335" />
+        <entry key="..\:/Users/kilbu/Dropbox/Engineering/Projects/Cornhole Score Viewer/Android Development/scoreviewer/app/src/main/res/drawable/simpledivideritemdecoration.xml" value="0.34739583333333335" />
+        <entry key="..\:/Users/kilbu/Dropbox/Engineering/Projects/Cornhole Score Viewer/Android Development/scoreviewer/app/src/main/res/drawable/splash_screen.xml" value="0.34739583333333335" />
+        <entry key="..\:/Users/kilbu/Dropbox/Engineering/Projects/Cornhole Score Viewer/Android Development/scoreviewer/app/src/main/res/layout/activity_main.xml" value="0.32382246376811596" />
+        <entry key="..\:/Users/kilbu/Dropbox/Engineering/Projects/Cornhole Score Viewer/Android Development/scoreviewer/app/src/main/res/layout/fragment_about.xml" value="0.32382246376811596" />
+        <entry key="..\:/Users/kilbu/Dropbox/Engineering/Projects/Cornhole Score Viewer/Android Development/scoreviewer/app/src/main/res/layout/fragment_controller.xml" value="0.36594202898550726" />
+        <entry key="..\:/Users/kilbu/Dropbox/Engineering/Projects/Cornhole Score Viewer/Android Development/scoreviewer/app/src/main/res/layout/fragment_controller_colorpicker.xml" value="0.36594202898550726" />
+        <entry key="..\:/Users/kilbu/Dropbox/Engineering/Projects/Cornhole Score Viewer/Android Development/scoreviewer/app/src/main/res/layout/fragment_controller_pad.xml" value="0.32382246376811596" />
+        <entry key="..\:/Users/kilbu/Dropbox/Engineering/Projects/Cornhole Score Viewer/Android Development/scoreviewer/app/src/main/res/layout/fragment_controlling.xml" value="0.36594202898550726" />
+        <entry key="..\:/Users/kilbu/Dropbox/Engineering/Projects/Cornhole Score Viewer/Android Development/scoreviewer/app/src/main/res/layout/fragment_cornhole.xml" value="0.36594202898550726" />
+        <entry key="..\:/Users/kilbu/Dropbox/Engineering/Projects/Cornhole Score Viewer/Android Development/scoreviewer/app/src/main/res/layout/fragment_uart.xml" value="0.32382246376811596" />
+        <entry key="..\:/Users/kilbu/Dropbox/Engineering/Projects/Cornhole Score Viewer/Android Development/scoreviewer/app/src/main/res/menu/menu_help.xml" value="0.33125" />
+        <entry key="..\:/Users/zkilburn/Dropbox/Engineering/Projects/Cornhole Score Viewer/Android Development/scoreviewer/app/src/main/res/layout/activity_controlling.xml" value="0.3383152173913043" />
+        <entry key="..\:/Users/zkilburn/Dropbox/Engineering/Projects/Cornhole Score Viewer/Android Development/scoreviewer/app/src/main/res/layout/activity_cornhole.xml" value="0.5541666666666667" />
+        <entry key="..\:/Users/zkilburn/Dropbox/Engineering/Projects/Cornhole Score Viewer/Android Development/scoreviewer/app/src/main/res/layout/activity_kickball.xml" value="0.3307291666666667" />
+        <entry key="..\:/Users/zkilburn/Dropbox/Engineering/Projects/Cornhole Score Viewer/Android Development/scoreviewer/app/src/main/res/layout/activity_main.xml" value="0.5541666666666667" />
+        <entry key="..\:/Users/zkilburn/Dropbox/Engineering/Projects/Cornhole Score Viewer/Android Development/scoreviewer/app/src/main/res/layout/fragment_commonhelp.xml" value="0.3307291666666667" />
+        <entry key="..\:/Users/zkilburn/Dropbox/Engineering/Projects/Cornhole Score Viewer/Android Development/scoreviewer/app/src/main/res/layout/fragment_controller.xml" value="0.3307291666666667" />
+        <entry key="..\:/Users/zkilburn/Dropbox/Engineering/Projects/Cornhole Score Viewer/Android Development/scoreviewer/app/src/main/res/layout/fragment_controller_colorpicker.xml" value="0.3307291666666667" />
+        <entry key="..\:/Users/zkilburn/Dropbox/Engineering/Projects/Cornhole Score Viewer/Android Development/scoreviewer/app/src/main/res/layout/fragment_controller_pad.xml" value="0.18795289855072464" />
+        <entry key="..\:/Users/zkilburn/Dropbox/Engineering/Projects/Cornhole Score Viewer/Android Development/scoreviewer/app/src/main/res/layout/fragment_controlling.xml" value="0.3307291666666667" />
+        <entry key="..\:/Users/zkilburn/Dropbox/Engineering/Projects/Cornhole Score Viewer/Android Development/scoreviewer/app/src/main/res/layout/fragment_cornhole.xml" value="0.33" />
+        <entry key="..\:/Users/zkilburn/Dropbox/Engineering/Projects/Cornhole Score Viewer/Android Development/scoreviewer/app/src/main/res/layout/fragment_dfu_filepicker.xml" value="0.3307291666666667" />
+        <entry key="..\:/Users/zkilburn/Dropbox/Engineering/Projects/Cornhole Score Viewer/Android Development/scoreviewer/app/src/main/res/layout/fragment_football.xml" value="0.5541666666666667" />
+        <entry key="..\:/Users/zkilburn/Dropbox/Engineering/Projects/Cornhole Score Viewer/Android Development/scoreviewer/app/src/main/res/layout/fragment_imagecrop.xml" value="0.3307291666666667" />
+        <entry key="..\:/Users/zkilburn/Dropbox/Engineering/Projects/Cornhole Score Viewer/Android Development/scoreviewer/app/src/main/res/layout/fragment_imagetransfer.xml" value="0.3307291666666667" />
+        <entry key="..\:/Users/zkilburn/Dropbox/Engineering/Projects/Cornhole Score Viewer/Android Development/scoreviewer/app/src/main/res/layout/fragment_imagetransfer_formatselector_page.xml" value="0.3307291666666667" />
+        <entry key="..\:/Users/zkilburn/Dropbox/Engineering/Projects/Cornhole Score Viewer/Android Development/scoreviewer/app/src/main/res/layout/fragment_info.xml" value="0.5541666666666667" />
+        <entry key="..\:/Users/zkilburn/Dropbox/Engineering/Projects/Cornhole Score Viewer/Android Development/scoreviewer/app/src/main/res/layout/fragment_kickball.xml" value="0.5541666666666667" />
+        <entry key="..\:/Users/zkilburn/Dropbox/Engineering/Projects/Cornhole Score Viewer/Android Development/scoreviewer/app/src/main/res/layout/fragment_main.xml" value="0.5541666666666667" />
+        <entry key="..\:/Users/zkilburn/Dropbox/Engineering/Projects/Cornhole Score Viewer/Android Development/scoreviewer/app/src/main/res/layout/fragment_mqttsettings.xml" value="0.3307291666666667" />
+        <entry key="..\:/Users/zkilburn/Dropbox/Engineering/Projects/Cornhole Score Viewer/Android Development/scoreviewer/app/src/main/res/layout/fragment_mqttsettings_codereader.xml" value="0.3307291666666667" />
+        <entry key="..\:/Users/zkilburn/Dropbox/Engineering/Projects/Cornhole Score Viewer/Android Development/scoreviewer/app/src/main/res/layout/fragment_neopixel.xml" value="0.3307291666666667" />
+        <entry key="..\:/Users/zkilburn/Dropbox/Engineering/Projects/Cornhole Score Viewer/Android Development/scoreviewer/app/src/main/res/layout/fragment_neopixel_boardselector.xml" value="0.3307291666666667" />
+        <entry key="..\:/Users/zkilburn/Dropbox/Engineering/Projects/Cornhole Score Viewer/Android Development/scoreviewer/app/src/main/res/layout/fragment_neopixel_colorpicker.xml" value="0.3307291666666667" />
+        <entry key="..\:/Users/zkilburn/Dropbox/Engineering/Projects/Cornhole Score Viewer/Android Development/scoreviewer/app/src/main/res/layout/fragment_neopixel_componentselector.xml" value="0.3307291666666667" />
+        <entry key="..\:/Users/zkilburn/Dropbox/Engineering/Projects/Cornhole Score Viewer/Android Development/scoreviewer/app/src/main/res/layout/fragment_peripheralmode.xml" value="0.3307291666666667" />
+        <entry key="..\:/Users/zkilburn/Dropbox/Engineering/Projects/Cornhole Score Viewer/Android Development/scoreviewer/app/src/main/res/layout/fragment_peripheralmodules.xml" value="0.3307291666666667" />
+        <entry key="..\:/Users/zkilburn/Dropbox/Engineering/Projects/Cornhole Score Viewer/Android Development/scoreviewer/app/src/main/res/layout/fragment_pinio.xml" value="0.3307291666666667" />
+        <entry key="..\:/Users/zkilburn/Dropbox/Engineering/Projects/Cornhole Score Viewer/Android Development/scoreviewer/app/src/main/res/layout/fragment_plotter.xml" value="0.3307291666666667" />
+        <entry key="..\:/Users/zkilburn/Dropbox/Engineering/Projects/Cornhole Score Viewer/Android Development/scoreviewer/app/src/main/res/layout/fragment_scanner.xml" value="0.5541666666666667" />
+        <entry key="..\:/Users/zkilburn/Dropbox/Engineering/Projects/Cornhole Score Viewer/Android Development/scoreviewer/app/src/main/res/layout/fragment_uart.xml" value="0.5541666666666667" />
+        <entry key="..\:/Users/zkilburn/Dropbox/Engineering/Projects/Cornhole Score Viewer/Android Development/scoreviewer/app/src/main/res/layout/fragment_volleyball.xml" value="0.5541666666666667" />
+        <entry key="..\:/Users/zkilburn/Dropbox/Engineering/Projects/Cornhole Score Viewer/Android Development/scoreviewer/app/src/main/res/layout/layout_uart_packetitem.xml" value="0.3307291666666667" />
+        <entry key="..\:/Users/zkilburn/Dropbox/Engineering/Projects/Cornhole Score Viewer/Android Development/scoreviewer/app/src/main/res/menu/navigation.xml" value="0.3307291666666667" />
+      </map>
+    </option>
+  </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
+</project>
