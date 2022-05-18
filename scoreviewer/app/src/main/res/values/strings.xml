@@ -3,6 +3,8 @@
     <string name="gamecornhole">Cornhole</string>
     <string name="gamevolleyball">Volleyball</string>
     <string name="gamekickball">Kickball</string>
+    <string name="settingTeam1Color">Team 1 Color</string>
+    <string name="settingTeam2Color">Team 2 Color</string>
 
     <string name="addone">+1</string>
     <string name="addtwo">+2</string>

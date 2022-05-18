@@ -78,6 +78,7 @@ public class MainActivity extends AppCompatActivity implements ScannerFragment.S
                     .add(R.id.contentLayout, mMainFragment, "Main")
                     .commit();
 
+
         } else {
             hasUserAlreadyBeenAskedAboutBluetoothStatus = savedInstanceState.getBoolean("hasUserAlreadyBeenAskedAboutBluetoothStatus");
             mMainFragment = (MainFragment) fragmentManager.findFragmentByTag("Main");

@@ -61,11 +61,16 @@ public class Communications  {//extends BlePeripheralUart {
     public static String set15T1="Y";//on
     public static String set15T2="Z";//on
 
+    public static String setColorT1 = "T1";
+    public static String setColorT2 = "T2";
+
+
     private int T1Score = 0;
     private int T2Score = 0;
 
     private volatile StringBuilder mDataBuffer = new StringBuilder();
     private volatile StringBuilder mTextSpanBuffer = new StringBuilder();
+    private volatile StringBuilder mPacketBuffer = new StringBuilder();
 
     private boolean isInit = false;
 
@@ -120,6 +125,89 @@ public class Communications  {//extends BlePeripheralUart {
             }
         }
     }
+
+    public void setTeamColor(int teamNumber, int r,int g, int b)
+    {
+        if(teamNumber == 1)
+        {
+            mPacketBuffer.append(setColorT1);
+            mPacketBuffer.append(',');
+            if(r<10)
+            {
+                mPacketBuffer.append('0');
+                mPacketBuffer.append('0');
+            }
+            else if(r<100)
+            {
+                mPacketBuffer.append('0');
+            }
+            mPacketBuffer.append(r);
+            mPacketBuffer.append(',');
+            if(g<10)
+            {
+                mPacketBuffer.append('0');
+                mPacketBuffer.append('0');
+            }
+            else if(g<100)
+            {
+                mPacketBuffer.append('0');
+            }
+            mPacketBuffer.append(g);
+            mPacketBuffer.append(',');
+            if(b<10)
+            {
+                mPacketBuffer.append('0');
+                mPacketBuffer.append('0');
+            }
+            else if(b<100)
+            {
+                mPacketBuffer.append('0');
+            }
+            mPacketBuffer.append(b);
+            mBlePeripheralUart.uartSend(mPacketBuffer.toString().getBytes(),null);
+        }
+        else
+        {
+            mPacketBuffer.append(setColorT2);
+            mPacketBuffer.append(',');
+            if(r<10)
+            {
+                mPacketBuffer.append('0');
+                mPacketBuffer.append('0');
+            }
+            else if(r<100)
+            {
+                mPacketBuffer.append('0');
+            }
+            mPacketBuffer.append(r);
+            mPacketBuffer.append(',');
+            if(g<10)
+            {
+                mPacketBuffer.append('0');
+                mPacketBuffer.append('0');
+            }
+            else if(g<100)
+            {
+                mPacketBuffer.append('0');
+            }
+            mPacketBuffer.append(g);
+            mPacketBuffer.append(',');
+            if(b<10)
+            {
+                mPacketBuffer.append('0');
+                mPacketBuffer.append('0');
+            }
+            else if(b<100)
+            {
+                mPacketBuffer.append('0');
+            }
+            mPacketBuffer.append(b);
+            mBlePeripheralUart.uartSend(mPacketBuffer.toString().getBytes(),null);
+
+        }
+        mPacketBuffer.delete(0,mPacketBuffer.length());
+    }
+
     public int getT1Score()
     {
         return T1Score;

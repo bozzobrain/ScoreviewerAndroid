@@ -7,6 +7,7 @@ import android.app.ProgressDialog;
 import android.bluetooth.BluetoothGatt;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -53,7 +54,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-public class Controlling extends ConnectedPeripheralFragment implements Cornhole.CornholeListener, Football.FootballListener, Volleyball.VolleyballListener, Kickball.KickballListener, UartDataManager.UartDataManagerListener {
+public class Controlling extends ConnectedPeripheralFragment implements LEDColorPickerFragment.LEDColorPickerFragmentListener, Cornhole.CornholeListener, Football.FootballListener, Volleyball.VolleyballListener, Kickball.KickballListener, UartDataManager.UartDataManagerListener {
     private final static String TAG = Controlling.class.getSimpleName();
 
     // Fragment parameters
@@ -66,8 +67,10 @@ public class Controlling extends ConnectedPeripheralFragment implements Cornhole
     private final static int MODULE_FOOTBALL = 2;
     private final static int MODULE_VOLLEYBALL = 3;
     private final static int MODULE_KICKBALL = 4;
+    private final static int MODULE_COLORPICKER_TEAM1 = 5;
+    private final static int MODULE_COLORPICKER_TEAM2 = 6;
 
-    private final static int NUMBER_OF_GAMES = 5;
+    private final static int NUMBER_OF_GAMES = 7;
 
     Communications mCommunications = new Communications();
 
@@ -239,12 +242,14 @@ public class Controlling extends ConnectedPeripheralFragment implements Cornhole
     // endregion
 
     // region Actions
-
+    int teamSelected =0;
     private UartDataManager mUartDataManager;
     private WeakReference<Cornhole> mWeakCornhole = null;
     private WeakReference<Football> mWeakFootball = null;
     private WeakReference<Kickball> mWeakKickball = null;
     private WeakReference<Volleyball> mWeakVolleyball = null;
+    private WeakReference<LEDColorPickerFragment> mWeakLEDColorPickerFragment1 = null;
+    private WeakReference<LEDColorPickerFragment> mWeakLEDColorPickerFragment2 = null;
 
     private void onModuleSelected(int moduleId) {
         FragmentActivity activity = getActivity();
@@ -295,6 +300,27 @@ public class Controlling extends ConnectedPeripheralFragment implements Cornhole
 
                     // Enable cache for control pad
                     mWeakVolleyball = new WeakReference<>(volleyball);
+                    mUartDataManager.clearRxCache(mBlePeripheral.getIdentifier());
+                    mUartDataManager.setListener(Controlling.this);
+                    break;
+                case MODULE_COLORPICKER_TEAM1:
+                    LEDColorPickerFragment LedColorPickerFragment_Team1 = LEDColorPickerFragment.newInstance(mCommunications,1, Color.RED, 0);
+                    fragment = LedColorPickerFragment_Team1;
+                    fragmentTag = "Color Team 1";
+
+                    teamSelected =1;
+                    // Enable cache for control pad
+                    mWeakLEDColorPickerFragment1 = new WeakReference<>(LedColorPickerFragment_Team1);
+                    mUartDataManager.clearRxCache(mBlePeripheral.getIdentifier());
+                    mUartDataManager.setListener(Controlling.this);
+                    break;
+                case MODULE_COLORPICKER_TEAM2:
+                    LEDColorPickerFragment LedColorPickerFragment_Team2 = LEDColorPickerFragment.newInstance(mCommunications,2,Color.BLUE,0);
+                    fragment = LedColorPickerFragment_Team2;
+                    fragmentTag = "Color Team 2";
+                    teamSelected =2;
+                    // Enable cache for control pad
+                    mWeakLEDColorPickerFragment2 = new WeakReference<>(LedColorPickerFragment_Team2);
                     mUartDataManager.clearRxCache(mBlePeripheral.getIdentifier());
                     mUartDataManager.setListener(Controlling.this);
                     break;
@@ -367,7 +393,8 @@ public class Controlling extends ConnectedPeripheralFragment implements Cornhole
             final int kModulesSectionTitlePosition = getModuleCellsStartPosition() - 1;
             if (position == kPeripheralDetailsCellsStartPosition - 1 || position == kModulesSectionTitlePosition) {
                 return kCellType_SectionTitle;
-            } else if (position < kModulesSectionTitlePosition) {
+            }
+            else if (position < kModulesSectionTitlePosition) {
                 return kCellType_PeripheralDetails;
             } else {
                 return kCellType_Module;
@@ -411,7 +438,8 @@ public class Controlling extends ConnectedPeripheralFragment implements Cornhole
 //                    stringId = "controlling_sectiontitle_games";
                     if (position == kPeripheralDetailsCellsStartPosition - 1) {
                         stringId = "peripheralmodules_sectiontitle_device_single";
-                    } else {
+                    }
+                    else{
                         stringId = "controlling_sectiontitle_games";
                     }
 
@@ -478,6 +506,14 @@ public class Controlling extends ConnectedPeripheralFragment implements Cornhole
                             iconDrawableId = R.drawable.kickball;
                             titleId = R.string.gamekickball;
                             break;
+                        case MODULE_COLORPICKER_TEAM1:
+                            iconDrawableId = R.drawable.kickball;
+                            titleId = R.string.settingTeam1Color;
+                            break;
+                        case MODULE_COLORPICKER_TEAM2:
+                            iconDrawableId = R.drawable.kickball;
+                            titleId = R.string.settingTeam2Color;
+                            break;
                     }
 
                     Controlling.ModulesAdapter.ModuleViewHolder moduleViewHolder = (Controlling.ModulesAdapter.ModuleViewHolder) holder;
@@ -508,7 +544,7 @@ public class Controlling extends ConnectedPeripheralFragment implements Cornhole
 
 
         private int[] getMenuItems() {
-                return new int[]{MODULE_INFO, MODULE_CORNHOLE, MODULE_FOOTBALL, MODULE_KICKBALL, MODULE_VOLLEYBALL};
+                return new int[]{MODULE_INFO, MODULE_CORNHOLE, MODULE_FOOTBALL, MODULE_KICKBALL, MODULE_VOLLEYBALL,MODULE_COLORPICKER_TEAM1,MODULE_COLORPICKER_TEAM2};
         }
 
         class SectionViewHolder extends RecyclerView.ViewHolder {
@@ -605,6 +641,14 @@ public class Controlling extends ConnectedPeripheralFragment implements Cornhole
         }));
     }
 
+    @Override
+    public void onColorSelected(int color, float wComponent) {
+
+        final int r = (color >> 16) & 0xFF;
+        final int g = (color >> 8) & 0xFF;
+        final int b = (color >> 0) & 0xFF;
+        mCommunications.setTeamColor(teamSelected,r,g,b);
+    }
     // region ControllerPadFragmentListener
     @Override
     public void onSendControllerPadButtonStatus(int tag, boolean isPressed) {
